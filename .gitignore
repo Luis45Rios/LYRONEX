@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+
+# Entornos virtuales
+venv/
+.env/
+
+# Archivos de audio
+audio.wav
+
+# VS Code
+.vscode/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Modelos y cache
+.cache/
+
+# Audio
+audio.wav
