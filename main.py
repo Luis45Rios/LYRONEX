@@ -1,5 +1,5 @@
 from faster_whisper import WhisperModel
-from commands import open_spotify, open_brave
+from commands import open_brave, open_spotify, open_VSCode, hour, open_youtube
 from voice import speak
 
 import sounddevice as sd
@@ -45,8 +45,16 @@ while True:
     elif "navegador" in texto_completo:
         speak("Abriendo Brave")
         open_brave()
-    elif "apagate" in texto_completo:
+    elif "visual studio code" in texto_completo:
+        speak("Abriendo VS Code")
+        open_VSCode()
+    elif "hora" in texto_completo:
+        speak(f"La hora es {hour()}")
+    elif "youtube" in texto_completo:
+        speak("Esta bien señr, abriré Youtube")
+        open_youtube()
+    elif "apagate" or "apágate" in texto_completo:
         speak("Esta bien señor, me retiro...")
         break
     else:
-        speak("No entendí el comando")
+        speak("No entendí el comando señor. Repitamelo por favor")
